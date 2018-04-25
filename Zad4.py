@@ -1,9 +1,9 @@
-def max(lista):
+def max_rec(lista):
 
     if len(lista)==1:
         return lista[0]
 
-    submax = max(lista[1:])
+    submax = max_rec(lista[1:])
 
     if lista[0] > submax:
 
@@ -14,4 +14,4 @@ def max(lista):
         return submax
 
 lista = [-1,5,9]
-print(max(lista))
+print(max_rec(lista))
